@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;1,300&display=swap');
+
+
+body{
+    background-color: #fff3b0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+h1{
+    font-family: 'Rubik';
+    text-align: center;
+    background-color: #9E2A2B;
+    color: #fff;
+    margin: 50px 50px 50px 150px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+h4{
+    font-family: 'Rubik';
+    text-align: center;
+    margin-top: 30px;
+}
+
+#divDireita{
+    margin-left: 100px;
+    width: 40%;
+
+}
+
+#divDireita img{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: 95%;
+    justify-content: center;
+}
+
+.divEsquerda{
+    width: 60%;
+    margin-right: 0;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+.divP{
+    margin: 80px 50px 100px 0;
+    display: flex;
+}
+
+.formulario label{
+    font-weight: bold;
+    font-family: 'Rubik';
+}
+
+.divEsquerda input {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 6px 6px #0000001c;
+}
+
+.divEsquerda .arroba {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 6px 6px #0000001c;
+}
+
+.divEsquerda select{
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 6px 6px #0000001c;
+}
+
+.divEsquerda .form-control{
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 6px 6px #0000001c;
+}
+
+.divEsquerda label{
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.divEsquerda input::placeholder {
+    color: #000000be;
+}
+
+.botao{
+    width: 100%;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #9E2A2B;
+    color: #fff;
+    padding: 5px;
+    font-size: 1.5em;
+}
+
+.divEsquerda input::placeholder{
+    color: gray;
+}
+
+
+

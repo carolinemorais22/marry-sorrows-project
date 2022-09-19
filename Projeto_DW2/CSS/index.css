@@ -1,0 +1,27 @@
+body{
+    background-color: #fff3b0;
+}
+
+/****************************************** MAIN ***********************************************/
+
+main{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.parte1{
+    margin-bottom: 100px;
+}
+
+@media (min-width: 62em) {
+    .featurette-heading {
+      margin-top: 7rem;
+    }
+  }
+
+
+
+  
+
+  
+

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/cadastrar.css">
+    <link rel="stylesheet" href="../CSS/topo.css">
+</head>
+<body class="container-fluid p-0">
+    <!--------------------------------------- Header ----------------------------------------------->
+  <header>
+    <nav class="navbar navbar-expand-md bg-gradient menu">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-0" href="index.html" aria-current="page" style="font-size: 30px; font-family: 'Times New Roman', Times, serif;"><img src="../imagens/logo_@kta_rondon.png" class="img-fluid" width="100" height="100">Mary's Sorrows</a>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="nav nav-masthead container-fluid" style="--bs-scroll-height: 100px; margin-left: 810px;">
+              <li class="nav-item me-4">
+                <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="index.html">Início</a>
+              </li>
+              <li class="nav-item me-4">
+                <a class="nav-link fw-bold py-1 px-0  active" href="cadastrar.html">Cadastrar</a>
+              </li>
+              <li class="nav-item me-4">
+                <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="quem_somos.html">Quem somos</a>
+              </li>
+              <li class="nav-item dropdown me-4">
+                <a class="nav-link dropdown-toggle fw-bold py-1 px-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Mais!
+                </a>
+                <ul class="dropdown-menu dropdown-menu-lg-end">
+                  <li><a class="dropdown-item" href="porque_denunciar.html">Por que denunciar?</a><li>
+                  <li><a class="dropdown-item" href="outros.html">Outras formas de denunciar<a></li>
+                </ul>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="borda ms-4 me-4"></div>
+    </header>
+
+<!-------------------------------------- Main -------------------------------------------------->
+<main>
+  <h1>Bem-vinda à area de Cadastro!</h1>
+  <h4>Insira abaixo seus dados corretamente!</h4>
+  <div class="container-fluid divP">
+    <div id="divDireita">
+            <img src="../imagens/undraw_showing_support_re_5f2v.svg">
+    </div>
+    <div class="divEsquerda container-fluid">
+            <form class="row g-3 form">
+                <div class="col-md-5">
+                  <label class="form-label">Nome da Vítima:</label>
+                  <input type="text" class="form-control" id="firstName" placeholder="Insira o nome da vítima">
+                  <p id="validation"></p>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Sobrenome da Vítima:</label>
+                  <input type="text" class="form-control" id="lastName" placeholder="Insira o sobrenome da vítima">
+                  <p id="validation2"></p>
+                </div>
+                <label class="sexo ms-2"> Sexo: </label>
+                <div class="form-check ms-3">
+                  <input type="radio" class="form-check-input" name="sex" value="female">
+                  <label class="form-check-label">Feminino</label>
+                </div>
+                <div class="form-check ms-3">
+                  <input type="radio" class="form-check-input" name="sex" value="male">
+                  <label class="form-check-label">Masculino</label>
+                </div>
+                <div class="form-check ms-3">
+                  <input type="radio" class="form-check-input" name="sex" value="uninformed">
+                  <label class="form-check-label">Prefiro não informar</label>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">E-mail:</label>
+                  <div class="input-group">
+                    <div class="input-group-text arroba">@</div>
+                    <input type="email" class="form-control" id="email" aria-describedby="inputGroupPrepend" placeholder="Insira um e-mail">
+                    </div>
+                    <p id="validation3"></p>
+                </div>
+                <div class="col-md-5">
+                  <label class="form-label">Telefone:</label>
+                  <input type="tel" class="form-control" id="tel" placeholder="(00) 12345-6789">
+                  <p id="validation4"></p>  
+                </div>
+                  <div class="col-md-6">
+                    <label class="form-label">CPF (sem ponto e hífen):</label>
+                    <input type="text" class="form-control" id="cpf" placeholder="Insira um CPF">
+                    <p id="validation5"></p>
+                  </div>
+                <div class="col-md-5">
+                  <label class="form-label">Cidade</label>
+                  <input type="text" class="form-control" id="city" placeholder="Insira uma cidade">
+                  <p id="validation6"></p>
+                </div>
+                <div class="col-md-5">
+                  <label class="form-label">Estado</label>
+                  <select class="form-select" id="state">
+                    <option value="">Selecione</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espirito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                  </select>
+                  <p id="validation7"></p>
+                </div>
+                <div class="col-11 mb-2">
+                  <label class="form-label">Mensagem</label>
+                  <textarea class="form-control" id="message" placeholder="Insira uma mensagem"></textarea>
+                  <p id="validation8"></p>
+                </div>
+                <div class="col-11">
+                  <button class="mb-lg-3 botao" id="submit" type="submit" onclick="callAll()">Enviar</button>
+                </div>
+              </form>
+        </div>
+</div>
+
+</main>
+<!------------------------------------ Footer -------------------------------------------------->
+<footer class="text-center text-white">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: #540B0E;">
+    <a href="https://www.ifms.edu.br/"><img src="../imagens/logo_ifms.png" class="img-fluid" width="200px"></a>
+    <p class=""> © Copyright: Caroline Morais, 2022.</p>
+  </div>
+</footer>
+<!-- Footer -->
+      <script src="../JS/cadastrar.js"></script>
+</body>
+</html>
