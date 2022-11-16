@@ -1,0 +1,37 @@
+<table class="table table-hover">
+
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Sobrenome</th>
+        <th scope="col">Sexo</th>
+        <th scope="col">E-mail</th>
+        <th scope="col">Telefone</th>
+        <th scope="col">CPF</th>
+        <th scope="col">Cidade</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Mensagem</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Editar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% denuncias.forEach(denuncia => { %>
+        <tr>
+          <th scope="row"><%= denuncia.id %> </th>
+          <th scope="row"><%= denuncia.nome %> </th>
+          <th scope="row"><%= denuncia.sobrenome %> </th>
+          <th scope="row"><%= denuncia.sexo %> </th>
+          <th scope="row"><%= denuncia.email %> </th>
+          <th scope="row"><%= denuncia.telefone %> </th>
+          <th scope="row"><%= denuncia.cpf %> </th>
+          <th scope="row"><%= denuncia.cidade %> </th>
+          <th scope="row"><%= denuncia.estado %> </th>
+          <th scope="row"><%= denuncia.mensagem %> </th>
+          <th scope="row"><a href="/deletar/<%= denuncia.id %> ">Deletar</a> </th>
+          <th scope="row"><a href="/editar/<%= denuncia.id %> ">Editar</a> </th>
+        </tr>
+      <% }) %>
+    </tbody>
+</table>

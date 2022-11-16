@@ -1,0 +1,103 @@
+<h1>Bem-vinda à area de Cadastro!</h1>
+  <h4>Insira abaixo seus dados corretamente!</h4>
+  <div class="container-fluid divP">
+    <div id="divDireita">
+            <img src="/public/imagens/undraw_showing_support_re_5f2v.svg">
+    </div>
+    <div class="divEsquerda container-fluid">
+            <form class="row g-3 form" method="post" action="/edicao/<%= denuncia.id %>" onsubmit="return validar()">
+                <div class="col-md-5">
+                  <label class="form-label">Nome da Vítima:</label>
+                  <input type="text" value="<%= denuncia.nome %>" name="nome" class="form-control" id="firstName" placeholder="Insira o nome da vítima">
+                  <p id="validation"></p>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Sobrenome da Vítima:</label>
+                  <input type="text" value="<%= denuncia.sobrenome %>" name="sobrenome" class="form-control" id="lastName" placeholder="Insira o sobrenome da vítima">
+                  <p id="validation2"></p>
+                </div>
+                <div class="d-flex">
+                <label class="sexo ms-2"> Sexo: </label>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input ms-3" name="sexo" value="1">
+                  <label class="form-check-label ms-1">Feminino</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input ms-3" name="sexo" value="2">
+                  <label class="form-check-label ms-1">Masculino</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input ms-3" name="sexo" value="3">
+                  <label class="form-check-label ms-1">Prefiro não informar</label>
+                </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">E-mail:</label>
+                  <div class="input-group">
+                    <div class="input-group-text arroba">@</div>
+                    <input type="email" value="<%= denuncia.email %>" name="email" class="form-control" id="email" aria-describedby="inputGroupPrepend" placeholder="Insira um e-mail">
+                    </div>
+                    <p id="validation3"></p>
+                </div>
+                <div class="col-md-5">
+                  <label class="form-label">Telefone:</label>
+                  <input type="tel" name="telefone" value="<%= denuncia.telefone %>" class="form-control" id="tel" placeholder="(00) 12345-6789">
+                  <p id="validation4"></p>  
+                </div>
+                  <div class="col-md-6">
+                    <label class="form-label">CPF (sem ponto e hífen):</label>
+                    <input type="text" value="<%= denuncia.cpf %>" class="form-control" id="cpf" name="cpf" placeholder="Insira um CPF">
+                    <p id="validation5"></p>
+                  </div>
+                <div class="col-md-5">
+                  <label class="form-label">Cidade</label>
+                  <input type="text" value="<%= denuncia.cidade %>" class="form-control" id="city" placeholder="Insira uma cidade" name="cidade">
+                  <p id="validation6"></p>
+                </div>
+                <div class="col-md-5">
+                  <label class="form-label">Estado</label>
+                  <select class="form-select" id="state" name="estado">
+                    <option value="">Selecione</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espirito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                  </select>
+                  <p id="validation7"></p>
+                </div>
+                <div class="col-11 mb-2">
+                  <label class="form-label">Mensagem</label>
+                  <textarea class="form-control" id="message" name="mensagem" placeholder="Insira uma mensagem"><%= denuncia.mensagem %></textarea>
+                  <p id="validation8"></p>
+                </div>
+                <div class="col-11">
+                  <button class="mb-lg-3 botao" id="submit" type="submit" onclick="callAll()">Enviar</button>
+                </div>
+              </form>
+        </div>
+</div>
+
+<script src="/public/JS/cadastrar.js"></script>

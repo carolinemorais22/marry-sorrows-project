@@ -13,6 +13,10 @@ main{
     margin-bottom: 100px;
 }
 
+p .tjpr{
+    text-decoration: none;
+}
+
 @media (min-width: 62em) {
     .featurette-heading {
       margin-top: 7rem;

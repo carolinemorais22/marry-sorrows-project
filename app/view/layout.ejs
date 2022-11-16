@@ -7,33 +7,35 @@
     <title>Bem-vinda!</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../CSS/index.css">
-    <link rel="stylesheet" href="../CSS/topo.css">
+    <link rel="stylesheet" href="/public/CSS/index.css">
+    <link rel="stylesheet" href="/public/CSS/topo.css">
+    <link rel="stylesheet" href="/public/CSS/cadastrar.css">
+
 </head>
 <body>
 <!--------------------------------------- Header ----------------------------------------------->
   <header>
       <nav class="navbar navbar-expand-md bg-gradient menu">
           <div class="container-fluid">
-            <a class="navbar-brand ms-0" href="index.html" aria-current="page" style="font-size: 30px; font-family: 'Times New Roman', Times, serif;"><img src="../imagens/logo_@kta_rondon.png" class="img-fluid" width="100" height="100">Mary's Sorrows</a>
+            <a class="navbar-brand ms-0" href="/" aria-current="page" style="font-size: 30px; font-family: 'Times New Roman', Times, serif;"><img src="/public/imagens/logo_@kta_rondon.png" class="img-fluid" width="100" height="100">Mary's Sorrows</a>
             <div class="collapse navbar-collapse" id="navbarScroll">
               <ul class="nav nav-masthead" style="--bs-scroll-height: 100px; margin-left: 810px;">
                 <li class="nav-item me-4">
-                  <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="index.html">Início</a>
+                  <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="/">Início</a>
                 </li>
                 <li class="nav-item me-4">
-                  <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="cadastrar.html">Cadastrar</a>
+                  <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="/cadastrar">Cadastrar</a>
                 </li>
                 <li class="nav-item me-4">
-                  <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="quem_somos.html">Quem somos</a>
+                  <a class="nav-link fw-bold py-1 px-0" aria-current="page" href="/quem_somos">Quem somos</a>
                 </li>
                 <li class="nav-item dropdown me-4">
                   <a class="nav-link dropdown-toggle fw-bold py-1 px-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Mais!
                   </a>
                   <ul class="dropdown-menu dropdown-menu-lg-end">
-                    <li><a class="dropdown-item" href="porque_denunciar.html">Por que denunciar?</a><li>
-                    <li><a class="dropdown-item" href="outros.html">Outras formas de denunciar<a></li>
+                    <li><a class="dropdown-item" href="/porque_denunciar">Por que denunciar?</a><li>
+                    <li><a class="dropdown-item" href="/outros">Outras formas de denunciar<a></li>
                   </ul>
               </li>
               </ul>
@@ -44,22 +46,15 @@
       </header>
 <!-------------------------------------- Main -------------------------------------------------->
       <main>
-        <!--Parte 1-->
-        <div class="row ms-2 parte1">
-          <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">Olá! Seja Bem-vinda ao Mary's Sorrows!</h2>
-            <p class="lead lh-base text-center ms-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, numquam nemo? Esse ad magnam eligendi omnis perspiciatis aperiam, consequuntur tempora ea consequatur enim libero sit quae. Voluptas alias earum eius?(O texto ainda será formulado).</p>
-          </div>
-          <div class="col-md-3">
-            <img src="../imagens/Image_about_girls_in__Illustrations___art__by_Ele_.png" alt="" width="400" class="image-fluid">
-          </div>
-        </div>
+       
+            <%- body %> 
+
       </main>
 <!------------------------------------ Footer -------------------------------------------------->
 <footer class="text-center text-white">
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: #540B0E;">
-    <a href="https://www.ifms.edu.br/"><img src="../imagens/logo_ifms.png" class="img-fluid" width="200px"></a>
+    <a href="https://www.ifms.edu.br/"><img src="/public/imagens/logo_ifms.png" class="img-fluid" width="200px"></a>
     <p class=""> © Copyright: Caroline Morais, 2022.</p>
   </div>
 </footer>

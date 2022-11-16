@@ -1,14 +1,16 @@
-let form = document.querySelector(".form");
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-});
+let valido = true;
 
 let text;
 
+function validar(){
+  return valido;
+}
+
+//Validação do Formulário
 function callAll(){
   firstName();
   lastName();
+  radio();
   email();
   tel();
   cpf();
@@ -23,10 +25,11 @@ function firstName() {
 
   if (firstName == "" || firstName == null || firstName.length < 4){
    
-    text = "Por favor, insira um nome!"
-    document.getElementById("validation").style.color = "#ff0000";
-    document.getElementById("validation").style.margin = "5px";
-    document.getElementById("validation").innerHTML = text;
+    // text = "Por favor, insira um nome!"
+    // document.getElementById("validation").style.color = "#ff0000";
+    // document.getElementById("validation").style.margin = "5px";
+    // document.getElementById("validation").innerHTML = text;
+    valido = false;
 
   } 
   else {
@@ -44,11 +47,11 @@ function lastName(){
 
   if (lastName == "" || lastName == null || lastName.length < 4){
    
-    text = "Por favor, insira um sobrenome!"
-    document.getElementById("validation2").style.color = "#ff0000";
-    document.getElementById("validation2").style.margin = "5px";
-    document.getElementById("validation2").innerHTML = text;
-
+    // text = "Por favor, insira um sobrenome!"
+    // document.getElementById("validation2").style.color = "#ff0000";
+    // document.getElementById("validation2").style.margin = "5px";
+    // document.getElementById("validation2").innerHTML = text;
+    valido = false;
   } 
   else {
 
@@ -60,6 +63,31 @@ function lastName(){
   }
 }
 
+function radio(){
+  if (document.form.sexo[0].checked == false && document.form.sexo[1].checked == false && document.form.sexo[2].checked == false) {
+    document.getElementById("sexo1").style.color = "#ff0000";
+    document.getElementById("sexo2").style.color = "#ff0000";
+    document.getElementById("sexo3").style.color = "#ff0000";
+    valido = false;
+  }
+  else if(document.form.sexo[0].checked == true && document.form.sexo[1].checked == false && document.form.sexo[2].checked == false){
+    document.getElementById("sexo1").style.color = "#229a00";
+    document.getElementById("sexo2").style.color = "#000";
+    document.getElementById("sexo3").style.color = "#000";
+  }
+  else if(document.form.sexo[0].checked == false && document.form.sexo[1].checked == true && document.form.sexo[2].checked == false){
+    document.getElementById("sexo2").style.color = "#229a00";
+    document.getElementById("sexo1").style.color = "#000";
+    document.getElementById("sexo3").style.color = "#000";
+  }
+  else if(document.form.sexo[0].checked == false && document.form.sexo[1].checked == false && document.form.sexo[2].checked == true){
+    document.getElementById("sexo3").style.color = "#229a00";
+    document.getElementById("sexo1").style.color = "#000";
+    document.getElementById("sexo2").style.color = "#000";
+  }
+  else{}
+}
+
 function email(){
   const email = document.getElementById("email").value;
 
@@ -69,7 +97,7 @@ function email(){
     document.getElementById("validation3").style.color = "#ff0000";
     document.getElementById("validation3").style.margin = "5px";
     document.getElementById("validation3").innerHTML = text;
-
+    valido = false;
   } 
   else {
 
@@ -85,32 +113,36 @@ function tel(){
   const tel = document.getElementById("tel").value;
   const telefone = tel.replace(/\D/g, '');
  
-  if(tel == ""){
+  if(tel === ""){
      text = "Por favor, insira um telefone!"
       document.getElementById("validation4").style.color = "#ff0000";
       document.getElementById("validation4").style.margin = "5px";
       document.getElementById("validation4").innerHTML = text;
+      valido = false;
   }
 
-  if(!(telefone.length >= 10 && telefone.length <= 11)){
+  else if(!(telefone.length >= 10 && telefone.length <= 11)){
     text = "Por favor, insira um telefone!"
     document.getElementById("validation4").style.color = "#ff0000";
     document.getElementById("validation4").style.margin = "5px";
     document.getElementById("validation4").innerHTML = text;
+    valido = false;
   }
 
-  if(telefone.length == 11 && parseInt(telefone.substring(2, 3)) != 9){
+  else if(telefone.length == 11 && parseInt(telefone.substring(2, 3)) != 9){
     text = "Por favor, insira um telefone!"
     document.getElementById("validation4").style.color = "#ff0000";
     document.getElementById("validation4").style.margin = "5px";
     document.getElementById("validation4").innerHTML = text;
+    valido = false;
   }
 
-  if (telefone.length == 10 && [2, 3, 4, 5, 7].indexOf(parseInt(telefone.substring(2, 3))) == -1){
+  else if (telefone.length == 10 && [2, 3, 4, 5, 7].indexOf(parseInt(telefone.substring(2, 3))) == -1){
     text = "Por favor, insira um telefone!"
       document.getElementById("validation4").style.color = "#ff0000";
       document.getElementById("validation4").style.margin = "5px";
       document.getElementById("validation4").innerHTML = text;
+      valido = false;
   }
 
   else{
@@ -130,10 +162,11 @@ function cpf() {
     //strCPF  = Retira Caracteres Invalidos(strCPF,11);
     if (strCPF == "00000000000" || strCPF == "11111111111" || strCPF == "33333333333" || strCPF == "44444444444" || strCPF == "55555555555" || strCPF == "66666666666" || strCPF == "77777777777" || strCPF == "88888888888" || strCPF == "99999999999" || strCPF == "" || strCPF.length > 11){
 
-      text = "Por favor, insira um CPF!"
+      text = "Por favor, insira um CPF válido!"
       document.getElementById("validation5").style.color = "#ff0000";
       document.getElementById("validation5").style.margin = "5px";
       document.getElementById("validation5").innerHTML = text;
+      valido = false;
     }
 
     else{
@@ -148,6 +181,7 @@ function cpf() {
             document.getElementById("validation5").style.color = "#ff0000";
             document.getElementById("validation5").style.margin = "5px";
             document.getElementById("validation5").innerHTML = text;
+            valido = false;
         }
       }}
 
@@ -163,6 +197,7 @@ function cpf() {
             document.getElementById("validation5").style.color = "#ff0000";
             document.getElementById("validation5").style.margin = "5px";
             document.getElementById("validation5").innerHTML = text;
+            valido = false;
           }
           text = "Ótimo!"
           document.getElementById("validation5").style.color = "#229a00";
@@ -182,6 +217,7 @@ function city(){
     document.getElementById("validation6").style.color = "#ff0000";
     document.getElementById("validation6").style.margin = "5px";
     document.getElementById("validation6").innerHTML = text;
+    valido = false;
 
   } 
   else {
@@ -203,6 +239,7 @@ function state(){
     document.getElementById("validation7").style.color = "#ff0000";
     document.getElementById("validation7").style.margin = "5px";
     document.getElementById("validation7").innerHTML = text;
+    valido = false;
 
   } 
   else {
@@ -224,6 +261,7 @@ function message(){
     document.getElementById("validation8").style.color = "#ff0000";
     document.getElementById("validation8").style.margin = "5px";
     document.getElementById("validation8").innerHTML = text;
+    valido = false;
 
   } 
   else {
@@ -235,3 +273,4 @@ function message(){
 
   }
 }
+
