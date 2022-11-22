@@ -1,5 +1,4 @@
 <table class="table table-hover">
-
     <thead>
       <tr>
         <th scope="col">ID</th>
@@ -29,8 +28,8 @@
           <th scope="row"><%= denuncia.cidade %> </th>
           <th scope="row"><%= denuncia.estado %> </th>
           <th scope="row"><%= denuncia.mensagem %> </th>
-          <th scope="row"><a href="/deletar/<%= denuncia.id %> ">Deletar</a> </th>
-          <th scope="row"><a href="/editar/<%= denuncia.id %> ">Editar</a> </th>
+          <th scope="row"><a href="/deletar/<%= denuncia.id %> "><img style="height:30px" src="../public/imagens/ana.png"></a> </th>
+          <th scope="row"><a href="/editar/<%= denuncia.id %> "><img style="height:30px" src="../public/imagens/lapis.png" alt=""></a></th>
         </tr>
       <% }) %>
     </tbody>
