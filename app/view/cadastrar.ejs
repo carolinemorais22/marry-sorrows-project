@@ -5,7 +5,7 @@
             <img src="/public/imagens/undraw_showing_support_re_5f2v.svg">
     </div>
     <div class="divEsquerda container-fluid">
-            <form class="row g-3 form" method="post" action="/persistir" onsubmit="return validar()">
+            <form class="row g-3 form" method="post" action="/persistir" name="formulario">
                 <div class="col-md-5">
                   <label class="form-label">Nome da Vítima:</label>
                   <input type="text" class="form-control" name="nome" id="firstName" placeholder="Insira o nome da vítima">
@@ -46,17 +46,17 @@
                 </div>
                   <div class="col-md-6">
                     <label class="form-label">CPF (sem ponto e hífen):</label>
-                    <input type="text" name="cpf" class="form-control" id="cpf" placeholder="Insira um CPF">
+                    <input type="text" name="CPF" class="form-control" id="CPF" placeholder="Insira um CPF">
                     <p id="validation5"></p>
                   </div>
                 <div class="col-md-5">
                   <label class="form-label">Cidade</label>
-                  <input type="text" name="cidade" class="form-control" id="city" placeholder="Insira uma cidade">
+                  <input type="text" name="cidade" class="form-control" id="cidade" placeholder="Insira uma cidade">
                   <p id="validation6"></p>
                 </div>
                 <div class="col-md-5">
                   <label class="form-label">Estado</label>
-                  <select class="form-select" name="estado" id="state">
+                  <select class="form-select" name="estado" id="estado">
                     <option value="">Selecione</option>
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
@@ -94,10 +94,61 @@
                   <p id="validation8"></p>
                 </div>
                 <div class="col-11">
-                  <button class="mb-lg-3 botao" id="submit" type="submit" onclick="callAll()" href="./listar.ejs">Enviar</button>
+                  <button class="mb-lg-3 botao" id="submit" type="submit" onclick="validar()">Enviar</button>
                 </div>
               </form>
         </div>
 </div>
 
-<script src="/public/JS/cadastrar.js"></script>
+<script>
+  function validar() {
+    var nome = formulario.nome;
+    var sobrenome = formulario.sobrenome;
+    var sexo = formulario.sexo;
+    var telefone = formulario.telefone;
+    var validador = 0;
+    var CPF = formulario.CPF;
+    var cidade = formulario.cidade;
+    var estado = formulario.estado;
+
+    if(nome.value == ""){
+      alert("Nome não informado!");
+      validador = validador + 1;
+    }
+
+    if(sobrenome.value == ""){
+      alert("Sobrenome não informado!");
+      validador = validador + 1;
+    }
+
+    if(sexo.value != 1 & sexo.value != 2 & sexo.value != 3 ) {
+      alert("Sexo não informado!");
+      validador = validador + 1;
+    }
+
+    if(CPF.value == ""){
+      alert("CPF não informado corretamente!");
+      validador = validador + 1;
+    }
+
+    if(telefone.value == ""){
+      alert("Número não informado corretamente!");
+      validador = validador + 1;
+    }
+
+    if(cidade.value == ""){
+      alert("Cidade não informada");
+      validador = validador + 1;
+    }
+
+    if(estado.value == "") {
+      alert("Estado não informado!");
+      validador = validador + 1;
+    }
+
+    if(validador > 0){
+      document.location.reload(true);
+    }
+
+  }
+</script>

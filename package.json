@@ -1,7 +1,6 @@
 {
   "name": "mary-sorrows-project-main",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "dev": "nodemon app/server.js"
@@ -17,5 +16,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carolinemorais22/mary-sorrows-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/carolinemorais22/mary-sorrows-project/issues"
+  },
+  "homepage": "https://github.com/carolinemorais22/mary-sorrows-project#readme",
+  "description": ""
 }
