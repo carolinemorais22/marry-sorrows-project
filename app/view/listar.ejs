@@ -1,3 +1,9 @@
+<style>
+  .table{
+    margin-bottom: 20%;
+  }
+</style>
+
 <table class="table table-hover">
     <thead>
       <tr>
@@ -28,7 +34,7 @@
           <th scope="row"><%= denuncia.cidade %> </th>
           <th scope="row"><%= denuncia.estado %> </th>
           <th scope="row"><%= denuncia.mensagem %> </th>
-          <th scope="row"><a href="/deletar/<%= denuncia.id %> "><img style="height:30px" src="../public/imagens/ana.png"></a> </th>
+          <th scope="row"><a href="/deletar/<%= denuncia.id %> "><img style="height:30px" src="../public/imagens/lixeira.png"></a> </th>
           <th scope="row"><a href="/editar/<%= denuncia.id %> "><img style="height:30px" src="../public/imagens/lapis.png" alt=""></a></th>
         </tr>
       <% }) %>

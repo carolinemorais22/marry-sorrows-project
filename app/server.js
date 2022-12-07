@@ -39,30 +39,16 @@ app.get("/", function(req, res){
 });
 
 app.get("/quem_somos", function(req, res){
-    res.sendFile(__dirname + "/view/quem_somos.html");
+    res.render("quem_somos");
 });
 
 app.get("/cadastrar", function(req, res){
     res.render("cadastrar");
 });
 
-app.get("/outros", function(req, res){
-    res.sendFile(__dirname + "/view/outros.html");
-});
-
-app.get("/porque_denunciar", function(req, res){
-    res.sendFile(__dirname + "/view/porque_denunciar.html");
-});
-
-//Rotas
-
-app.get("/", function(req, res){
-    res.sendFile(__dirname + "/view/index.html");
-});
-
-app.get("/cadastrar", function(req, res){
-    res.sendFile(__dirname + "/view/cadastrar.html");
-});
+// app.get("/outros", function(req, res){
+//     res.sendFile(__dirname + "/view/outros.html");
+// });
 
 
 app.post("/persistir", function(req, res){

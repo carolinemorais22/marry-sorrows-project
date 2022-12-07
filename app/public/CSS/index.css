@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Rubik:ital,wght@0,400;1,300&display=swap');
+
 body{
     background-color: #fff3b0;
 }
@@ -17,10 +19,43 @@ p .tjpr{
     text-decoration: none;
 }
 
-@media (min-width: 62em) {
+@media (min-width: 1200px) {
     .featurette-heading {
       margin-top: 7rem;
     }
+  }
+
+  .carousel-tam{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    width: 800px;
+    height: 500px;
+  }
+  #buttonDenuncia{
+    text-decoration: none;
+    color: #ffff;
+    font-family: 'Raleway';
+    font-weight: bold;
+  }
+  .liNegrito{
+    list-style: none;
+    font-family: 'Raleway';
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  p{
+    list-style: none;
+    font-family: 'Raleway';
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .fonteIndex{
+    text-decoration: none;
+    color: #9E2A2B;
+    font-family: 'Raleway';
   }
 
 
